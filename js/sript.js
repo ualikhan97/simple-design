@@ -5,3 +5,12 @@ burgerElement.addEventListener("click", function () {
    document.querySelector(".header__shell").classList.toggle("active");
    document.body.classList.toggle("lock");
 });
+
+var swiper = new Swiper(".swiper-container", {
+   // Настройки Swiper, если нужно
+   loop: true, // Зацикливание слайдов
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+   },
+});

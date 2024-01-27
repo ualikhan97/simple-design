@@ -41,8 +41,8 @@ body.lock {
 .burger {
    display: none;
    flex-wrap: wrap;
-   gap: 2px;
-   width: 25px;
+   gap: 4px;
+   width: 29px;
    height: 20px;
    cursor: pointer;
    transition: all 0.3s;
@@ -51,21 +51,26 @@ body.lock {
 .burger span {
    display: block;
    width: 100%;
-   height: 2px;
-   background-color: #bd7048;
-   border-radius: 50px;
+   height: 3px;
+   background-color: black;
+
    transition: all 0.3s;
    position: relative;
 }
+.burger :first-child,
+.burger :last-child {
+   margin-left: 9px;
+   width: 25px;
+}
 
 .burger:hover span {
-   background-color: #fff;
+   background-color: #bd7048;
 }
 
 .burger.active span:first-child {
    transform: rotate(45deg);
    transition: 0.3s;
-   top: 7px;
+   top: 9px;
 }
 
 .burger.active span:nth-child(2) {
@@ -152,6 +157,10 @@ body.lock {
    color: rgba(0, 0, 0, 0.5);
    font-size: 15px;
    font-weight: 400;
+   transition: color 0.3s;
+}
+.header__menu ul li a:hover {
+   color: #bd7048;
 }
 
 /* .header__menu ul li {
@@ -220,7 +229,7 @@ body.lock {
    align-self: center;
 }
 
-.intro {
+/* .intro {
    position: relative;
    overflow: hidden;
    margin-bottom: 150px;
@@ -230,6 +239,44 @@ body.lock {
          rgba(104, 104, 104, 0.5) 100%
       ),
       url(../img/intro/intro.png), lightgray 50% / cover no-repeat;
+} */
+
+.intro {
+   position: relative;
+   overflow: hidden;
+   margin-bottom: 150px;
+}
+
+.intro__background {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(
+         0deg,
+         rgba(104, 104, 104, 0.5) 0%,
+         rgba(104, 104, 104, 0.5) 100%
+      ),
+      lightgray 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   z-index: -1;
+}
+
+.intro__cart-box.second {
+   display: none;
+}
+
+.intro__cart-logo svg {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.intro__cart-box.second:hover .intro__cart-logo svg * {
+   stroke: white;
 }
 
 .intro__title {
@@ -259,7 +306,7 @@ body.lock {
 }
 
 .btn__intro {
-   padding: 28px 48px;
+   padding: 28px 51px;
 }
 
 .intro__container {
@@ -290,16 +337,28 @@ body.lock {
 .intro__wrapper {
    display: flex;
    justify-content: space-evenly;
-   padding: 52px 0 7px;
-   border-top-left-radius: 50px;
-   border-top-right-radius: 50px;
+   padding: 68px 0;
+   border-radius: 50px;
    background: #fff;
+   margin-bottom: -73px;
+   position: relative;
+   z-index: 1;
 }
 
 .intro__info {
    display: flex;
    gap: 23px;
    align-self: flex-start;
+   position: relative;
+}
+.intro__info.first {
+   left: -51px;
+}
+.intro__info.second {
+   left: -36px;
+}
+.intro__info.third {
+   right: 24px;
 }
 
 .intro__text {
@@ -336,7 +395,7 @@ body.lock {
    max-width: 347px;
    width: 100%;
    /*height: 119px; */
-   max-width: 347px;
+   max-width: 388px;
    padding-top: 31px;
    padding-bottom: 30px;
    padding-left: 53px;
@@ -391,9 +450,54 @@ body.lock {
    display: flex;
 }
 
+.swiper-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   width: 100%;
+   height: 100%;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   z-index: 0;
+}
+
+.swiper-pagination {
+   margin-top: 130px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+   top: 359px;
+}
+
+.swiper-pagination-bullet-active {
+   width: 33px;
+}
+.swiper-pagination-bullet {
+   border-radius: 5px;
+   height: 7px;
+   background: white;
+}
+
+@media (max-width: 1200px) {
+   .intro__cart {
+      width: 30%;
+   }
+}
+
 @media (max-width: 1025px) {
    .wrapper {
       max-width: 980px;
+   }
+
+   .intro__info.first,
+   .intro__info.second,
+   .intro__info.third {
+      left: 0;
+      right: 0;
    }
 
    .intro__title {
@@ -406,10 +510,6 @@ body.lock {
       padding-bottom: 25px;
       padding-left: 46px;
    }
-
-   .btn__intro {
-      padding: 25px 45px;
-   }
 }
 @media (max-width: 860px) {
    .header__menu ul {
@@ -417,33 +517,65 @@ body.lock {
    }
    .intro__title {
       font-size: 33px;
-      width: 80%;
+      max-width: 640px;
    }
 
-   .intro__top {
-      font-size: 18px;
+   .intro {
+      overflow: visible;
+      height: 584px;
    }
-
+   /*
    .intro__bottom {
-      font-size: 13px;
       max-width: 172px;
+   } */
+
+   .intro__text {
+      gap: 6px;
+      /* width: 173px; */
+      width: 150px;
    }
 
-   .intro__icon {
-      width: 35px;
-      height: 35px;
+   /* .intro__wrapper {
+      padding: 44px 0 5px;
+   } */
+
+   .intro__container {
+      padding-bottom: 35px;
+   }
+
+   .intro__wrapper {
+      flex-direction: column;
+      gap: 40px;
+      padding: 43px 0 0;
+      max-width: 312px;
+      margin: 0 auto;
+      border-radius: 50px;
+      position: relative;
+      bottom: -25px;
    }
 
    .intro__info {
       gap: 16px;
+      align-self: center;
+      /* width: 100%; */
    }
 
-   .intro__text {
-      gap: 6px;
+   /* .intro__bottom {
+      max-width: none;
+   } */
+
+   .intro__info.first {
+      gap: 25px;
+   }
+   .intro__info.second {
+      gap: 22px;
+   }
+   .intro__info.third {
+      gap: 24px;
    }
 
-   .intro__wrapper {
-      padding: 44px 0 5px;
+   .swiper-pagination {
+      display: none;
    }
 }
 
@@ -465,22 +597,13 @@ body.lock {
       padding-left: 36px;
    }
 
-   .btn__intro {
-      padding: 22px 41px;
-   }
-
-   .intro__top {
-      font-size: 16px;
-   }
-
    .intro__container {
       gap: 30px;
       padding-top: 160px;
-      padding-bottom: 75px;
    }
 }
 
-@media (max-width: 731px) {
+@media (max-width: 760px) {
    .intro__title {
       font-size: 28px;
    }
@@ -512,22 +635,20 @@ body.lock {
    .header__shell.active {
       transform: translateX(0%);
       transition: all 0.3s;
+      flex-direction: column;
+      gap: 18px;
    }
 
    .header__menu ul li::after {
       left: 0;
-
+      width: 20%;
       transform: scaleX(0);
       transform-origin: left;
    }
 
-   .header__contacts.header__contacts-active {
-      display: none;
-   }
-
    .header__menu {
       margin-left: 0;
-      margin-top: -30px;
+      margin-top: 0;
    }
 
    .header__menu ul {
@@ -539,8 +660,24 @@ body.lock {
    }
 
    .header {
-      padding-top: 24px;
-      padding-bottom: 28px;
+      padding-top: 28px;
+      padding-bottom: 32px;
+   }
+
+   /* \\\\\\\\\\\\\\ */
+   .header__contacts {
+      display: none;
+   }
+   .header__contacts.header__contacts-active {
+      display: flex;
+   }
+   .header__hours,
+   .header__number {
+      font-size: 12px;
+   }
+
+   .header__wrapper {
+      flex-direction: row-reverse;
    }
 }
 
@@ -555,7 +692,7 @@ body.lock {
 
    .intro__title {
       font-size: 33px;
-      width: 70%;
+      max-width: 460px;
    }
 }
 
@@ -582,43 +719,17 @@ body.lock {
    .intro__container {
       gap: 20px;
       padding-top: 140px;
-      padding-bottom: 60px;
    }
 
-   .intro__top {
-      font-size: 15px;
-   }
-
-   .intro__bottom {
+   /* .intro__bottom {
       max-width: 160px;
-   }
+   } */
 }
 
 @media (max-width: 600px) {
    .header__hours,
    .header__number {
       font-size: 14px;
-   }
-
-   .intro__wrapper {
-      flex-direction: column;
-      gap: 15px;
-      padding: 20px 0 0;
-   }
-
-   .intro__info {
-      gap: 10px;
-      align-self: center;
-      width: 50%;
-   }
-
-   .intro__bottom {
-      max-width: none;
-   }
-
-   .intro__icon {
-      width: 33px;
-      height: 33px;
    }
 
    .intro__cart-top {
@@ -632,9 +743,8 @@ body.lock {
 }
 
 @media (max-width: 511px) {
-   .header {
-      padding-top: 15px;
-      padding-bottom: 20px;
+   .header__menu {
+      margin-left: 0;
    }
    .intro__cart {
       width: 36%;
@@ -642,57 +752,30 @@ body.lock {
       padding-left: 18px;
    }
 
-   .intro__icon {
-      width: 27px;
-      height: 27px;
-   }
-
    .intro__title {
-      width: 90%;
+      max-width: 415px;
    }
 }
 
 @media (max-width: 426px) {
-   .header__contacts {
-      display: none;
-   }
-   .header__contacts.header__contacts-active {
-      display: flex;
-   }
-   .header__hours,
-   .header__number {
-      font-size: 12px;
-   }
-
-   .header__shell.active {
-      flex-direction: column;
-      gap: 18px;
-   }
-
-   .header__wrapper {
-      flex-direction: row-reverse;
-   }
-
    .header__contacts {
       gap: 10px;
 
       top: 3px;
    }
 
+   .header {
+      padding-left: 18px;
+      padding-right: 18px;
+   }
+
    .intro__title {
-      font-size: 27px;
+      font-size: 25px;
+      max-width: 291px;
    }
 
-   .header__logo {
-      gap: 1px;
-   }
-
-   .logo__text {
-      font-size: 14px;
-   }
-
-   .logo__text-under {
-      font-size: 9px;
+   .intro__dots {
+      display: none;
    }
 
    .intro__cart {
@@ -702,60 +785,44 @@ body.lock {
    }
 
    .intro__cart {
-      width: 40%;
-      padding-left: 16px;
+      display: none;
    }
 
-   .header {
-      padding-top: 7px;
-      padding-bottom: 13px;
+   .intro__cart-box.second {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 61px;
+      height: 58px;
+      position: absolute;
+      top: 32px;
+      right: 45px;
+      cursor: pointer;
+      transition: all 0.3s;
+   }
+   .intro__cart-box.second:hover {
+      background: #262626;
    }
 
    .intro__container {
-      gap: 17px;
-      padding-top: 115px;
-      padding-bottom: 40px;
+      gap: 86px;
+      padding-top: 171px;
    }
 
-   .intro__info {
-      align-self: flex-start;
-      width: 100%;
-      padding-left: 15px;
+   .intro__wrapper {
+      padding-top: 43px;
+      bottom: -50px;
+      gap: 54px;
    }
 
-   .btn__intro {
-      padding: 18px 30px;
-      font-size: 13px;
+   .intro__info.first {
+      margin-bottom: 20px;
    }
 }
 
 @media (max-width: 376px) {
-   .header {
-      padding-top: 5px;
-      padding-bottom: 10px;
-   }
    .intro__title {
       font-size: 25px;
-      width: 81%;
-   }
-
-   .intro__container {
-      gap: 15px;
-      padding-top: 105px;
-      padding-bottom: 30px;
-   }
-
-   .intro__wrapper {
-      gap: 10px;
-      padding: 15px 0 0;
-   }
-
-   .intro__top {
-      font-size: 14px;
-   }
-
-   .intro__bottom {
-      font-size: 12px;
    }
 
    .intro__cart {
@@ -769,11 +836,5 @@ body.lock {
    .intro__title {
       font-size: 24px;
       width: 94%;
-   }
-
-   .intro__container {
-      gap: 15px;
-      padding-top: 100px;
-      padding-bottom: 20px;
    }
 }
