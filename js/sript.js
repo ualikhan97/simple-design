@@ -6,7 +6,7 @@ burgerElement.addEventListener("click", function () {
    document.body.classList.toggle("lock");
 });
 
-var swiper = new Swiper(".swiper-container", {
+var swiper = new Swiper(".intro__swiper", {
    // Настройки Swiper, если нужно
    loop: true, // Зацикливание слайдов
    pagination: {
