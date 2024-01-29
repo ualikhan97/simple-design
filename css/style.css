@@ -495,8 +495,9 @@ body.lock {
 
 .how {
    padding-top: 49px;
-   display: flex;
-   gap: 77px;
+   /* display: flex;
+   gap: 77px; */
+   position: relative;
 }
 
 .how__left {
@@ -561,7 +562,10 @@ body.lock {
 }
 
 .how__right {
-   position: relative;
+   /* position: relative; */
+   position: absolute;
+   top: 52px;
+   right: 0;
 }
 
 .how__first {
@@ -587,6 +591,17 @@ body.lock {
    width: 100%;
    height: 100%;
    object-fit: contain;
+}
+
+.services {
+   padding-top: 120px;
+}
+
+.services__title {
+   color: #262626;
+   text-align: center;
+   font-size: 40px;
+   font-weight: 700;
 }
 
 @media (max-width: 1270px) {
@@ -615,6 +630,14 @@ body.lock {
       font-size: 38px;
    }
 
+   .how__number {
+      width: 100px;
+   }
+
+   .how__title {
+      font-size: 30px;
+   }
+
    .intro__cart {
       width: 30%;
       padding-top: 26px;
@@ -633,6 +656,7 @@ body.lock {
 
    .how {
       padding-top: 0;
+      display: flex;
    }
 
    .how__left {
@@ -836,7 +860,7 @@ body.lock {
    }
 
    .how__title {
-      font-size: 36px;
+      font-size: 30px;
       font-weight: 700;
    }
 
