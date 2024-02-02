@@ -189,36 +189,38 @@
             <div class="how__wrapper">
                <div class="how__left">
                   <div class="how__top">
-                     <h2 class="how__title">Как это работает?</h2>
+                     <h2 class="title">Как это работает?</h2>
                   </div>
-                  <div class="how__info">
-                     <div class="how__number">01</div>
-                     <div class="how__text first">
-                        <div class="how__caption">Выбор состава проекта</div>
-                        <div class="how__description">
-                           Выберите состав вашего проекта: только планировка или
-                           дизайн-проект
+                  <div class="how__container">
+                     <div class="how__info">
+                        <div class="how__number">01</div>
+                        <div class="how__text first">
+                           <div class="how__caption">Выбор состава проекта</div>
+                           <div class="how__description">
+                              Выберите состав вашего проекта: только планировка
+                              или дизайн-проект
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="how__info">
-                     <div class="how__number">02</div>
-                     <div class="how__text second">
-                        <div class="how__caption">Настройка проекта</div>
-                        <div class="how__description">
-                           Отметьте в корзине нужен ли вам профессиональный
-                           замер, подбор строительной бригады или точный просчет
-                           сметы
+                     <div class="how__info">
+                        <div class="how__number">02</div>
+                        <div class="how__text second">
+                           <div class="how__caption">Настройка проекта</div>
+                           <div class="how__description">
+                              Отметьте в корзине нужен ли вам профессиональный
+                              замер, подбор строительной бригады или точный
+                              просчет сметы
+                           </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="how__info">
-                     <div class="how__number">03</div>
-                     <div class="how__text third">
-                        <div class="how__caption">Создание чертежей</div>
-                        <div class="how__description">
-                           Наши дизайнеры спроектируют интерьер, подготовят
-                           чертежи.
+                     <div class="how__info">
+                        <div class="how__number">03</div>
+                        <div class="how__text third">
+                           <div class="how__caption">Создание чертежей</div>
+                           <div class="how__description">
+                              Наши дизайнеры спроектируют интерьер, подготовят
+                              чертежи и сметы
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -237,10 +239,29 @@
 
       <section class="services">
          <div class="wrapper">
-            <h2 class="services__title">Наши услуги</h2>
+            <h2 class="title services__title">Наши услуги</h2>
+            <div class="services__img-box">
+               <div class="services__img-first">
+                  <img src="img/services/image1.png" alt="" />
+               </div>
+               <div class="services__img-second">
+                  <img src="img/services/image2.png" alt="" />
+               </div>
+            </div>
+            <div class="services__img-box services__img-box_active">
+               <div class="services__img-first_small img-contain">
+                  <img src="img/services/small-1.png" alt="" />
+               </div>
+               <div class="services__img-second_small img-contain">
+                  <img src="img/services/small-2.png" alt="" />
+               </div>
+            </div>
+
             <div class="services__wrapper">
                <div class="services__left">
-                  <div class="services__caption">Планировка за 99 000 ₸</div>
+                  <div class="services__caption caption">
+                     Планировка за 99 000 ₸
+                  </div>
                   <div class="services__deadline">
                      Срок выполнения: <span>5 дней</span>
                   </div>
@@ -261,12 +282,45 @@
                   </div>
                   <div class="services__info">
                      <button class="btn btn__services">Оставить заявку</button>
-                     <div class="services__example">
+                     <a href="#" class="services__example">
                         <div class="services__pdf">
                            <img src="img/services/pdf.png" alt="" />
                         </div>
                         <div class="services__ex">Посмотреть пример</div>
-                     </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="services__left services__left_active">
+                  <div class="services__caption caption">
+                     Планировка <br />за 89 000kzt
+                  </div>
+                  <div class="services__deadline">
+                     Срок выполнения: <span>7 дней</span>
+                  </div>
+                  <div class="services__description">
+                     Мы разработаем планировочное решение вашей квартиры,
+                     отвечающую всем нормам эргономики с соблюдением мокрых зон,
+                     учтем расстановку мебели, расположение покрытий полов, а
+                     так же подготовим белую 3D модель квартиры.
+                  </div>
+                  <div class="services__plan">
+                     <ul>
+                        <li>1 чертеж планировочного решения</li>
+                        <li>3D модель квартиры в черно-белом цвете</li>
+                        <li>обменный план</li>
+                        <li>план демонтажа стен</li>
+                        <li>план монтажа перегородок</li>
+                     </ul>
+                     <div class="services__vertical-line"></div>
+                  </div>
+                  <div class="services__info">
+                     <button class="btn btn__services">Оставить заявку</button>
+                     <a href="#" class="services__example">
+                        <div class="services__pdf">
+                           <img src="img/services/pdf.png" alt="" />
+                        </div>
+                        <div class="services__ex">Посмотреть пример</div>
+                     </a>
                   </div>
                </div>
             </div>
@@ -285,9 +339,25 @@
       </section>
       <section class="services services_margin">
          <div class="wrapper">
+            <div class="services__img-box">
+               <div class="services__img-first">
+                  <img src="img/services/image1.png" alt="" />
+               </div>
+               <div class="services__img-second">
+                  <img src="img/services/image 53.png" alt="" />
+               </div>
+            </div>
+            <div class="services__img-box services__img-box_active">
+               <div class="services__img-first_small3 img-contain">
+                  <img src="img/services/small-3.png" alt="" />
+               </div>
+               <div class="services__img-second_small4 img-contain">
+                  <img src="img/services/small-4.png" alt="" />
+               </div>
+            </div>
             <div class="services__wrapper services__wrapper_flex">
                <div class="services__left">
-                  <div class="services__caption">
+                  <div class="services__caption caption">
                      Дизайн-проект за 199 000 ₸
                   </div>
                   <div class="services__deadline">
@@ -316,12 +386,53 @@
                   </div>
                   <div class="services__info services__info_flex">
                      <button class="btn btn__services">Оставить заявку</button>
-                     <div class="services__example services__example_top">
+                     <a
+                        href="#"
+                        class="services__example services__example_top"
+                     >
                         <div class="services__pdf">
                            <img src="img/services/pdf.png" alt="" />
                         </div>
                         <div class="services__ex">Посмотреть пример</div>
-                     </div>
+                     </a>
+                  </div>
+               </div>
+               <div
+                  class="services__left services__left_active services__left_margin"
+               >
+                  <div
+                     class="services__caption caption services__caption_margin"
+                  >
+                     Дизайн проект <br />
+                     за 249 000kzt
+                  </div>
+                  <div class="services__deadline services__deadline_margin">
+                     Срок выполнения: <span>14 дней</span>
+                  </div>
+                  <div
+                     class="services__description services__description_margin"
+                  >
+                     Разработаем планировочное решение вашей квартиры. На основе
+                     созданного планировочного решения мы подготовим альбом,
+                     состоящий из 9 чертежей, необходимых строителям для
+                     ремонта.
+                  </div>
+                  <div class="services__plan services__plan_margin">
+                     <ul>
+                        <li>1 чертеж планировочного решения</li>
+                        <li>3D модель квартиры в черно-белом цвете</li>
+                        <li>9 чертежей в альбоме</li>
+                     </ul>
+                     <div class="services__vertical-line"></div>
+                  </div>
+                  <div class="services__info">
+                     <button class="btn btn__services">Оставить заявку</button>
+                     <a href="#" class="services__example">
+                        <div class="services__pdf">
+                           <img src="img/services/pdf.png" alt="" />
+                        </div>
+                        <div class="services__ex">Посмотреть пример</div>
+                     </a>
                   </div>
                </div>
             </div>
