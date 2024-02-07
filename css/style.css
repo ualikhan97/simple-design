@@ -888,6 +888,254 @@ body.lock {
    padding: 27px 58px;
 }
 
+.rooms {
+   margin-top: 32px;
+   margin-bottom: 110px;
+}
+
+.rooms__description {
+   color: rgba(38, 38, 38, 0.7);
+   font-size: 20px;
+   line-height: 31px;
+   text-align: center;
+   max-width: 1004px;
+   margin-bottom: 33px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.rooms__title {
+   text-align: center;
+   margin-bottom: 35px;
+}
+
+.rooms__wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+.rooms__gallery {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 26px;
+}
+
+.rooms__swiper {
+   max-width: 363px;
+   cursor: pointer;
+   border-radius: 20px;
+}
+
+.rooms__slide {
+   max-width: 363px;
+}
+.swiper-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   border-radius: 20px;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+   bottom: 20px;
+   /* border: 2px solid rgba(189, 112, 72, 0.5); */
+   background-color: rgb(189, 112, 72, 0.5);
+}
+
+.swiper-scrollbar-drag {
+   border: 2px solid rgba(189, 112, 72);
+   background-color: rgb(189, 112, 72);
+}
+
+.rooms__name {
+   color: rgb(53, 53, 53);
+   padding-left: 30px;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 24px;
+}
+
+.rooms__choose {
+   color: rgb(189, 112, 72);
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 18px;
+}
+
+.rooms__cart-logo {
+   width: 21px;
+   height: 23px;
+}
+.rooms__cart-logo svg {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.rooms__wrap {
+   display: flex;
+   align-items: center;
+   gap: 49px;
+   justify-content: space-between;
+}
+
+.rooms__choice {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   padding: 17px 35px;
+   border-radius: 100px;
+
+   background: rgb(250, 250, 250);
+   transition: all 0.3s;
+}
+.rooms__choice:hover {
+   background-color: rgb(142, 142, 142);
+}
+.rooms__choice:hover .rooms__choose {
+   color: #fff;
+}
+
+.rooms__choice:hover .rooms__cart-logo svg * {
+   stroke: #fff;
+}
+
+.rooms__caption {
+   position: relative;
+   padding-right: 5px;
+   margin-bottom: 43px;
+}
+
+.rooms__caption::after {
+   content: "";
+   position: absolute;
+   height: 1px;
+   width: 85%;
+   background: rgb(203, 203, 203);
+   top: 18px;
+   margin-left: 23px;
+   max-width: calc(100% - 23px);
+}
+
+.rooms__container:not(:last-child) {
+   margin-bottom: 90px;
+}
+
+.rooms__container.second {
+   margin-bottom: 102px;
+}
+
+.rooms__container.third {
+   margin-bottom: 100px;
+}
+
+.wrapper.hidden {
+   overflow: hidden;
+}
+
+.rooms__btn {
+   padding: 28px 40px;
+   max-width: 285px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.test__btn {
+   padding: 26px 40px;
+   max-width: 280px;
+   text-align: center;
+}
+
+.test__caption {
+   font-weight: 600;
+   color: rgb(255, 255, 255);
+   margin-bottom: 27px;
+   max-width: 447px;
+}
+
+.test__description {
+   margin-bottom: 35px;
+
+   color: rgba(255, 255, 255, 0.7);
+   font-size: 20px;
+   line-height: 24px;
+   max-width: 563px;
+}
+
+.test {
+   background: url(../img/test/test.jpeg) no-repeat;
+   background-size: cover;
+   padding-bottom: 119px;
+   padding-top: 118px;
+   margin-bottom: 150px;
+}
+
+.rooms__arrows.rooms__arrows_active {
+   display: none;
+}
+
+.arrows {
+   display: flex;
+}
+
+.arrow {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 45px;
+
+   cursor: pointer;
+   transition: all 0.3s;
+   border-radius: 50%;
+   background: #fff;
+
+   box-shadow: 0px 15px 22px 0px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s;
+}
+
+.arrow:hover {
+   background-color: rgb(142, 142, 142);
+}
+.arrow:hover svg * {
+   fill: white;
+}
+
+.rooms__arrows {
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   left: -6%;
+   right: -6%;
+   transform: translateY(-50%);
+   z-index: 10;
+   top: 37%;
+}
+
+.rooms__wrapper {
+   display: flex;
+}
+
+.rooms__sw {
+   max-width: 363px;
+}
+
+.rooms__sl {
+   max-width: 363px;
+   display: flex;
+}
+
+.rooms__container.active {
+   display: none;
+}
+
+.rooms__title.rooms__title_active {
+   display: none;
+   margin-bottom: 43px;
+}
+
 @media (max-width: 1320px) {
    .services__second.services__second_top {
       left: 60px;
@@ -994,6 +1242,26 @@ body.lock {
 
    .question {
       margin-top: 150px;
+   }
+
+   .rooms {
+      margin-top: 115px;
+   }
+
+   .rooms__wrapper {
+      flex-wrap: wrap;
+   }
+
+   .rooms__gallery:nth-child(n + 2) {
+      margin-bottom: 50px;
+   }
+
+   .rooms__container.third {
+      margin-bottom: 0;
+   }
+
+   .rooms__container:not(:last-child) {
+      margin-bottom: 0;
    }
 }
 
@@ -1207,6 +1475,74 @@ body.lock {
    .how__container {
       flex-direction: column;
    }
+}
+
+@media (max-width: 810px) {
+   .rooms {
+      margin-top: 80px;
+   }
+   .rooms__wrapper {
+      flex-direction: column;
+      align-items: center;
+      max-width: 365px;
+      position: relative;
+      /* margin: 0 auto; */
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+   }
+
+   .rooms__gallery:nth-child(n + 2) {
+      margin-bottom: 0;
+   }
+
+   .rooms__wrapper {
+      gap: 30px;
+   }
+
+   .rooms__arrows.rooms__arrows_active {
+      display: flex;
+   }
+
+   .rooms__container.active {
+      display: block;
+   }
+
+   .rooms__container {
+      display: none;
+   }
+
+   .rooms__title {
+      display: none;
+   }
+   .rooms__description {
+      display: none;
+   }
+
+   .rooms__title.rooms__title_active {
+      display: block;
+   }
+
+   .rooms__btn {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 68px;
+   }
+
+   /* .rooms__slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+
+   .rooms__sw {
+      max-width: 289px;
+   }
+
+   .rooms__sl {
+      max-width: 289px;
+      /* display: flex; */
 }
 
 @media (max-width: 760px) {
@@ -1613,6 +1949,11 @@ body.lock {
 
    .question {
       padding-left: 22px;
+   }
+
+   .test {
+      padding-bottom: 40px;
+      padding-top: 43px;
    }
 }
 
