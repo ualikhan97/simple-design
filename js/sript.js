@@ -26,18 +26,18 @@ var roomsSwiper = new Swiper(".rooms__swiper", {
 
 var newSwipe = new Swiper(" #roomsswipe", {
    loop: true,
-   // breakpoints: {
-   //    220: {
-   //       slidesPerView: 1.5,
-   //       slidesPerGroup: 1,
-   //       spaceBetween: 35,
-   //    },
-   //    640: {
-   //       slidesPerView: 1,
-   //       slidesPerGroup: 1,
-   //       spaceBetween: 24,
-   //    },
-   // },
+   breakpoints: {
+      220: {
+         slidesPerView: 1.2,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      640: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
 
    navigation: {
       nextEl: "#roomswrap1 .arrow_next",

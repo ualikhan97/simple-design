@@ -2285,6 +2285,14 @@ body.lock {
       padding-left: 10px;
       padding-right: 48px;
    }
+
+   .rooms__swiper {
+      max-width: 310px;
+   }
+
+   .rooms__sl {
+      margin-right: 35px;
+   }
 }
 
 @media (max-width: 376px) {
