@@ -26,6 +26,19 @@ var roomsSwiper = new Swiper(".rooms__swiper", {
 
 var newSwipe = new Swiper(" #roomsswipe", {
    loop: true,
+   // breakpoints: {
+   //    220: {
+   //       slidesPerView: 1.5,
+   //       slidesPerGroup: 1,
+   //       spaceBetween: 35,
+   //    },
+   //    640: {
+   //       slidesPerView: 1,
+   //       slidesPerGroup: 1,
+   //       spaceBetween: 24,
+   //    },
+   // },
+
    navigation: {
       nextEl: "#roomswrap1 .arrow_next",
       prevEl: "#roomswrap1 .arrow_prev",
@@ -44,4 +57,17 @@ var newSwipe = new Swiper("#roomsswipe3", {
       nextEl: "#roomswrap3 .arrow_next",
       prevEl: "#roomswrap3 .arrow_prev",
    },
+});
+
+document.querySelectorAll(".faq__contain").forEach((faqPlus, index) => {
+   faqPlus.addEventListener("click", function () {
+      this.querySelector(".faq__plus").classList.toggle("clicked");
+
+      document
+         .querySelectorAll(".plus-icon")
+         [index].classList.toggle("clicked");
+      document
+         .querySelectorAll(".faq__question")
+         [index].classList.toggle("show");
+   });
 });
