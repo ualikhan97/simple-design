@@ -140,13 +140,13 @@ body.lock {
    display: none;
 }
 
-.header__info {
+.info {
    display: flex;
    flex-direction: column;
    gap: 2px;
 }
 
-.header__logo {
+.logo {
    display: flex;
    flex-direction: column;
    gap: 2px;
@@ -180,21 +180,6 @@ body.lock {
    color: #bd7048;
 }
 
-/* .header__menu ul li {
-   position: relative;
-   transition: transform 0.3s;
-}
-.header__menu ul li:hover::after {
-   content: "";
-   position: absolute;
-   right: 0;
-   bottom: -10px;
-   width: 31px;
-   height: 1px;
-   background: #bd7048;
-   display: block;
-} */
-
 .header__menu ul li {
    position: relative;
 }
@@ -219,7 +204,7 @@ body.lock {
    opacity: 1;
 }
 
-.header__phone {
+.phone {
    width: 24px;
    height: 24px;
 }
@@ -230,17 +215,17 @@ body.lock {
    object-fit: contain;
 }
 
-.header__number {
+.number {
    color: #3b3b3b;
    font-size: 15px;
    font-weight: 600;
    transition: color 0.3s;
 }
-.header__number:hover {
+.number:hover {
    color: #6d6c6c;
 }
 
-.header__hours {
+.hours {
    color: rgba(59, 59, 59, 0.5);
    font-size: 15px;
    align-self: center;
@@ -1230,6 +1215,70 @@ body.lock {
    max-height: 200px;
 } */
 
+.footer__menu ul li a {
+   color: rgba(0, 0, 0, 0.5);
+   font-size: 15px;
+   font-weight: 400;
+   transition: color 0.3s;
+}
+.footer__menu ul li a:hover {
+   color: #bd7048;
+}
+
+.footer__menu {
+   position: relative;
+   top: -5px;
+}
+
+.footer__menu ul {
+   display: flex;
+   flex-direction: column;
+}
+.footer {
+   box-shadow: 0px 4px 37px 0px rgba(0, 0, 0, 0.05);
+   background: rgb(255, 255, 255);
+   padding-top: 51px;
+   padding-bottom: 76px;
+}
+
+.logo__text-under.logo__text-under_start {
+   align-self: flex-start;
+}
+
+.footer__privacy-policy {
+   color: rgba(33, 33, 33, 0.5);
+   font-size: 15px;
+   line-height: 18px;
+   letter-spacing: 0%;
+   max-width: 274px;
+   text-decoration: underline;
+}
+
+.footer__contacts {
+   display: flex;
+   gap: 15px;
+}
+
+.footer__wrapper {
+   display: flex;
+   justify-content: space-between;
+}
+
+.rights__text {
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   line-height: 18px;
+   letter-spacing: 0%;
+   text-align: center;
+}
+
+.rights {
+   box-shadow: 0px 4px 37px 0px rgba(0, 0, 0, 0.05);
+   background: rgb(38, 38, 38);
+   padding-top: 41px;
+   padding-bottom: 38px;
+}
+
 @media (max-width: 1320px) {
    .services__second.services__second_top {
       left: 60px;
@@ -1660,6 +1709,10 @@ body.lock {
    .rooms__slide {
       max-width: 400px;
    }
+
+   .footer__privacy-policy {
+      margin-right: -40px;
+   }
 }
 
 @media (max-width: 870px) {
@@ -1688,17 +1741,44 @@ body.lock {
 
 @media (max-width: 830px) {
    .rooms__swiper {
-      max-width: 360px;
+      max-width: 100%;
+      overflow: hidden;
+   }
+
+   .rooms__sl {
+      max-width: 100%;
    }
 
    .rooms__slide {
-      max-width: 360px;
+      max-width: 100%;
+   }
+
+   .rooms__gallery {
+      width: 100%;
+   }
+
+   .rooms__sw {
+      max-width: 100%;
+      overflow: visible;
+   }
+
+   .rooms .swiper__wrapper {
+      overflow: visible;
+   }
+
+   .rooms__wrapper {
+      max-width: 100%;
+      margin-right: 20px;
+   }
+
+   .rooms__arrows {
+      width: calc(100% + 6px);
    }
 }
 
 @media (max-width: 810px) {
    .rooms {
-      margin-top: 80px;
+      margin-top: 55px;
    }
    .rooms__wrapper {
       flex-direction: column;
@@ -1784,9 +1864,21 @@ body.lock {
    /* .rooms__wrapper {
       max-width: 100%;
    } */
+
+   .footer__privacy-policy {
+      max-width: 255px;
+   }
+
+   .footer__privacy-policy {
+      margin-right: -70px;
+   }
 }
 
 @media (max-width: 760px) {
+   /* .wrapper {
+      padding-left: 30px;
+      padding-right: 30px;
+   } */
    .intro__title {
       font-size: 28px;
    }
@@ -1854,8 +1946,8 @@ body.lock {
    .header__contacts.header__contacts-active {
       display: flex;
    }
-   .header__hours,
-   .header__number {
+   .hours,
+   .number {
       font-size: 12px;
    }
 
@@ -1921,11 +2013,11 @@ body.lock {
    }
 
    .test {
-      margin-bottom: 40px;
+      margin-bottom: 53px;
    }
 
    .faq__title {
-      margin-bottom: 40px;
+      margin-bottom: 33px;
    }
 
    .faq__contain {
@@ -1964,6 +2056,24 @@ body.lock {
       font-size: 33px;
       max-width: 460px;
    }
+
+   .footer__menu {
+      display: none;
+   }
+
+   .footer__privacy-policy {
+      display: none;
+   }
+
+   .footer__wrapper {
+      display: flex;
+      justify-content: space-around;
+   }
+
+   .footer {
+      padding-top: 39px;
+      padding-bottom: 42px;
+   }
 }
 
 @media (max-width: 670px) {
@@ -1997,8 +2107,8 @@ body.lock {
 }
 
 @media (max-width: 600px) {
-   .header__hours,
-   .header__number {
+   .hours,
+   .number {
       font-size: 14px;
    }
 
@@ -2223,8 +2333,9 @@ body.lock {
    }
 
    .test {
-      padding-bottom: 40px;
+      padding-bottom: 27px;
       padding-top: 43px;
+      padding-left: 19px;
    }
 
    .test__caption {
@@ -2233,10 +2344,8 @@ body.lock {
 
    .test__description {
       font-size: 15px;
-   }
 
-   .test__description {
-      margin-bottom: 33px;
+      margin-bottom: 15px;
       max-width: none;
    }
 
@@ -2282,16 +2391,68 @@ body.lock {
    }
 
    .faq__wrap {
-      padding-left: 10px;
-      padding-right: 48px;
-   }
-
-   .rooms__swiper {
-      max-width: 310px;
+      padding-right: 17px;
+      padding-left: 19px;
    }
 
    .rooms__sl {
       margin-right: 35px;
+   }
+
+   .rooms__wrap {
+      gap: 10px;
+   }
+
+   .rooms__cart-logo {
+      width: 17px;
+      height: 19px;
+   }
+
+   .rooms__choice {
+      gap: 12px;
+      padding: 15px 20px;
+   }
+
+   .rooms__container.active {
+      padding-left: 20px;
+      padding-right: 4px;
+   }
+
+   .rooms__caption {
+      margin-bottom: 30px;
+   }
+
+   .rooms__wrapper {
+      margin-bottom: 73px;
+   }
+
+   .rooms__wrap.rooms__wrap_third {
+      display: none;
+   }
+
+   .rooms__btn {
+      margin-top: -67px;
+   }
+
+   #roomswrap2 {
+      margin-bottom: 87px;
+   }
+
+   .footer__wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .footer {
+      padding-top: 39px;
+      padding-bottom: 42px;
+   }
+
+   .footer__contacts {
+      display: flex;
+      gap: 5px;
    }
 }
 
@@ -2308,6 +2469,13 @@ body.lock {
 
    .how__left {
       padding-left: 14px;
+   }
+
+   .footer__wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      display: flex;
+      justify-content: space-between;
    }
 }
 

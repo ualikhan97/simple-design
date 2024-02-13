@@ -28,7 +28,7 @@ var newSwipe = new Swiper(" #roomsswipe", {
    loop: true,
    breakpoints: {
       220: {
-         slidesPerView: 1.2,
+         slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
       },
@@ -46,6 +46,18 @@ var newSwipe = new Swiper(" #roomsswipe", {
 });
 var newSwipe = new Swiper("#roomsswipe2", {
    loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      640: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
    navigation: {
       nextEl: "#roomswrap2 .arrow_next",
       prevEl: "#roomswrap2 .arrow_prev",
@@ -53,6 +65,18 @@ var newSwipe = new Swiper("#roomsswipe2", {
 });
 var newSwipe = new Swiper("#roomsswipe3", {
    loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      640: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
    navigation: {
       nextEl: "#roomswrap3 .arrow_next",
       prevEl: "#roomswrap3 .arrow_prev",
